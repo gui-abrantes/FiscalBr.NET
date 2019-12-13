@@ -3050,6 +3050,52 @@ namespace FiscalBr.SpedFiscal
             [SpedCampos(27, "COD_GRUPO_TENSAO", "C", 2, 0, false)]
             public int? CodGrupoTensao { get; set; }
 
+            /// <summary>
+            ///     Chave da Nota Fiscal de Energia Elétrica Eletrônica.
+            /// </summary>
+            [SpedCampos(28, "CHV_DOCe", "C", 44, 0, false)]
+            public string ChaveDoce { get; set; }
+
+            /// <summary>
+            ///     Finalidade da emissão do documento eletrônico
+            /// </summary>
+            /// <remarks>
+            ///     1 – Normal
+            ///     2 – Substituição
+            ///     3 – Normal com ajuste
+            /// </remarks>
+            [SpedCampos(29, "FIN_DOCe", "N", 1, 0, false)]
+            public int FinDoce { get; set; }
+
+            /// <summary>
+            ///     Chave da nota referenciada.
+            /// </summary>
+            [SpedCampos(30, "CHV_DOCe_REF", "C", 44, 0, false)]
+            public string ChaveDoceRef { get; set; }
+            
+            /// <summary>
+            ///     Indicador do Destinatário/Acessante
+            /// </summary>
+            /// <remarks>
+            ///     1 – Contribuinte do ICMS;
+            ///     2 – Contribuinte Isento de Inscrição no Cadastro de Contribuintes do ICMS;
+            ///     9 – Não Contribuinte.
+            /// </remarks>
+            [SpedCampos(31, "IND_DEST", "N", 1, 0, false)]
+            public int? IndDest { get; set; }
+
+            /// <summary>
+            ///     Código do município do destinatário conforme a tabela do IBGE
+            /// </summary>
+            [SpedCampos(32, "COD_MUN_DEST", "N", 7, 0, false)]
+            public int? CodMunDest { get; set; }
+            
+            /// <summary>
+            ///     Código da conta analíica contábil debitada/creditada
+            /// </summary>
+            [SpedCampos(33, "COD_CTA", "C", 99, 0, false)]
+            public string CodCta { get; set; }
+
             public List<RegistroC510> RegC510s { get; set; }
             public List<RegistroC590> RegC590s { get; set; }
         }
