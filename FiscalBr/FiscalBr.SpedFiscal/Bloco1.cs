@@ -142,7 +142,7 @@ namespace FiscalBr.SpedFiscal
             ///     Possui informações consolidadas de saldos de restituição, ressarcimento e complementação do ICMS? : S: Sim; N: Não.
             /// </summary>
             [SpedCampos(14, "IND_REST_RESSARC_COMPL_ICMS", "LE", 1, 0, true)]
-            public SimOuNao IndRestRessarcComlIcms { get; set; }
+            public SimOuNao IndRestRessarcComplIcms { get; set; }
         }
 
         /// <summary>
